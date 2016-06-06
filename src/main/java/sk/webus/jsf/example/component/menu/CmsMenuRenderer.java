@@ -10,16 +10,15 @@ import org.primefaces.model.menu.Separator;
 import org.primefaces.model.menu.Submenu;
 import org.primefaces.util.ComponentUtils;
 
+import javax.faces.FacesException;
+import javax.faces.component.UIComponent;
+import javax.faces.context.FacesContext;
+import javax.faces.context.ResponseWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-
-import javax.faces.FacesException;
-import javax.faces.component.UIComponent;
-import javax.faces.context.FacesContext;
-import javax.faces.context.ResponseWriter;
 
 public class CmsMenuRenderer extends BaseMenuRenderer {
 
@@ -29,7 +28,7 @@ public class CmsMenuRenderer extends BaseMenuRenderer {
         ResponseWriter writer = context.getResponseWriter();
         String style = menu.getStyle();
         String styleClass = menu.getStyleClass();
-        styleClass = (styleClass == null) ? "layout-menu rio-menu" : "layout-menu rio-menu " + styleClass;
+        styleClass = (styleClass == null) ? "layout-menu cms-menu" : "layout-menu cms-menu " + styleClass;
         String clientId = menu.getClientId(context);
         
         writer.startElement("ul", menu);
@@ -77,7 +76,7 @@ public class CmsMenuRenderer extends BaseMenuRenderer {
             }
             else if(element instanceof Submenu) {
                 Submenu submenu = (Submenu) element;
-                String submenuClientId = (submenu instanceof UIComponent) ? ((UIComponent) submenu).getClientId() : menu.getClientId(context) + "_" + submenu.getId();
+                String submenuClientId = (submenu instanceof UIComponent) ? submenu.getClientId() : menu.getClientId(context) + "_" + submenu.getId();
                 String style = submenu.getStyle();
                 String styleClass = submenu.getStyleClass();
 
