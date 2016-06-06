@@ -4,13 +4,13 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.github.acdcjunior</groupId>
+    <groupId>sk.webus.jsf</groupId>
     <artifactId>jsf-primefaces-jaas-tomcat-example</artifactId>
     <version>1.0.0</version>
     <packaging>war</packaging>
 
     <name>JSF 2.2 - PrimeFaces with JAAS Authentication in Tomcat Example Project</name>
-    <url>http://acdcjunior.github.io</url>
+    <url>http://git.ads.local/jakubcik.jan/jsf-primefaces-jaas-tomcat-jpa-hibernate</url>
 
     <properties>
         <version.jsf.myfaces>2.2.6</version.jsf.myfaces>

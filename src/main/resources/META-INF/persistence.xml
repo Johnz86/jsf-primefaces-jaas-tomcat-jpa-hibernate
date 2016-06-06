@@ -14,7 +14,7 @@
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
             <!--<property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />-->
-            <!--<property name="javax.persistence.jdbc.url" value="jdbc:h2:X:/desen/GitHub/acdcjunior-github-io-example-projects/jsf-primefaces-jaas-tomcat-jpa-hibernate-example/target/tomcat7-run;INIT=RUNSCRIPT FROM 'file:X:/desen/GitHub/acdcjunior-github-io-example-projects/jsf-primefaces-jaas-tomcat-jpa-hibernate-example/src/test/resources/sql/ddl.sql'\;RUNSCRIPT FROM 'file:X:/desen/GitHub/acdcjunior-github-io-example-projects/jsf-primefaces-jaas-tomcat-jpa-hibernate-example/src/test/resources/sql/data.sql'" />-->
+            <!--<property name="javax.persistence.jdbc.url" value="jdbc:h2:D:/GIT/skolenie/jsf-primefaces-jaas-tomcat-jpa-hibernate-example/target/tomcat7-run;INIT=RUNSCRIPT FROM 'file:D:/GIT/skolenie/jsf-primefaces-jaas-tomcat-jpa-hibernate-example/src/test/resources/sql/ddl.sql'\;RUNSCRIPT FROM 'file:D:/GIT/skolenie/jsf-primefaces-jaas-tomcat-jpa-hibernate-example/src/test/resources/sql/data.sql'" />-->
             <!--<property name="javax.persistence.jdbc.user" value="sa" />-->
             <!--<property name="javax.persistence.jdbc.password" value="" />-->
         </properties>
