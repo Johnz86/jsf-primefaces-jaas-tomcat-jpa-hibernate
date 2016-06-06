@@ -53,6 +53,10 @@
         <param-value>/WEB-INF/primefaces-cms.taglib.xml</param-value>
     </context-param>
 
+    <context-param>
+        <param-name>primefaces.THEME</param-name>
+        <param-value>cms</param-value>
+    </context-param>
 
     <!--
      Default folder files
@@ -157,12 +161,29 @@
     </login-config>
 
     <error-page>
+        <!-- Missing login -->
+        <error-code>401</error-code>
+        <location>/WEB-INF/error-pages/forbidden.xhtml</location>
+    </error-page>
+    <error-page>
+        <!-- Forbidden directory listing -->
         <error-code>403</error-code>
         <location>/WEB-INF/error-pages/forbidden.xhtml</location>
     </error-page>
     <error-page>
+        <!-- Missing resource -->
         <error-code>404</error-code>
         <location>/WEB-INF/error-pages/notFound.xhtml</location>
+    </error-page>
+    <error-page>
+        <!-- Uncaught exception -->
+        <error-code>500</error-code>
+        <location>/WEB-INF/error-pages/exception.xhtml</location>
+    </error-page>
+    <error-page>
+        <!-- Unsupported servlet method -->
+        <error-code>503</error-code>
+        <location>/WEB-INF/error-pages/exception.xhtml</location>
     </error-page>
 
     <security-role>
