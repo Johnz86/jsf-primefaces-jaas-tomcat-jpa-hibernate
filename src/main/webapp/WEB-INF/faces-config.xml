@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+              version="2.2">
+
+    <name>primefaces-cms</name>
+
+    <component>
+        <component-type>org.primefaces.component.CmsMenu</component-type>
+        <component-class>sk.webus.jsf.example.component.menu.CmsMenu</component-class>
+    </component>
+
+    <render-kit>
+        <renderer>
+            <component-family>org.primefaces.component</component-family>
+            <renderer-type>org.primefaces.component.CmsMenuRenderer</renderer-type>
+            <renderer-class>sk.webus.jsf.example.component.menu.CmsMenuRenderer</renderer-class>
+        </renderer>
+    </render-kit>
+
+</faces-config>
