@@ -16,4 +16,11 @@
             removeAbandonedTimeout="20"
             logAbandoned="true"
             />
+
+    <Realm className="org.apache.catalina.realm.DataSourceRealm"
+           dataSourceName="jdbc/exampleDataSource"
+           localDataSource="true"
+           digest="SHA"
+           userTable="USERS" userNameCol="USER_NAME" userCredCol="USER_PASS"
+           userRoleTable="USER_ROLES" roleNameCol="ROLE_NAME"/>
 </Context>
