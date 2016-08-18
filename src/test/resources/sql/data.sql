@@ -11,9 +11,9 @@ INSERT INTO EMPLOYEE (ID, NAME, AGE, COMPANY) VALUES
 (4, 'ddd', 20, 1);
 
 INSERT INTO USERS (USER_NAME, USER_PASS) VALUES
-('root','0beec7b5ea3f0fdbc95d0dd47f3c5bc275da8a33'),
-('john','0beec7b5ea3f0fdbc95d0dd47f3c5bc275da8a33'),
-('fero','0beec7b5ea3f0fdbc95d0dd47f3c5bc275da8a33');
+('root','a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3'),
+('john','a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3'),
+('fero','a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3');
 
 
 INSERT INTO USER_ROLES (USER_NAME, ROLE_NAME) VALUES

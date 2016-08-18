@@ -20,7 +20,7 @@
     <Realm className="org.apache.catalina.realm.DataSourceRealm"
            dataSourceName="jdbc/exampleDataSource"
            localDataSource="true"
-           digest="SHA"
+           digest="SHA-256"
            userTable="USERS" userNameCol="USER_NAME" userCredCol="USER_PASS"
            userRoleTable="USER_ROLES" roleNameCol="ROLE_NAME"/>
 </Context>
