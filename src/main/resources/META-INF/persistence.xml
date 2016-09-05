@@ -5,7 +5,7 @@
              version="2.1">
 
     <persistence-unit name="examplePersistenceUnit" transaction-type="RESOURCE_LOCAL">
-        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
         <!-- Nome JNDI do Data Source -->
         <non-jta-data-source>java:/comp/env/jdbc/exampleDataSource</non-jta-data-source>

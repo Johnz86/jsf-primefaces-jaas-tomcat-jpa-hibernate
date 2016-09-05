@@ -10,6 +10,18 @@
         <p>Hello, <strong><h:outputText value="#{user}" /></strong>.</p>
         <p>This is the ADMIN page. You can only view this if you have logged in with a user having the <code>admin</code> role.</p>
 
+        <p:dataTable var="company"
+                value="#{persistenceAwareManagedBean.allCompanies}"
+                rows="5" lazy="true"
+                emptyMessage="Table with companies is empty.">
+            <p:column headerText="ID">
+                <h:outputText value="#{company.id}"/>
+            </p:column>
+            <p:column headerText="Company name">
+                <h:outputText value="#{company.name}"/>
+            </p:column>
+
+        </p:dataTable>
     </ui:define>
 
 </ui:composition>
