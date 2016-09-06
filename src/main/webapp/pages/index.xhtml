@@ -12,17 +12,17 @@
     <ui:define name="content">
         <h:form>
             <p:panel header="Home Page">
-                <h1>Welcome, this is the HOME page.</h1>
+                <h1>#{text['page.home.header']}</h1>
                 #{persistenceAwareManagedBean.allCompanies} !
             </p:panel>
 
             <p:panel rendered="#{!loginManager.userLoggedIn}">
-                You are not logged in. To login, use the button on the top-right corner of this page.
+                #{text['login.fill.form']}
             </p:panel>
 
             <p:panel rendered="#{loginManager.userLoggedIn}">
-                Hello, <strong>#{loginManager.user}</strong>.
-                <h:outputText rendered="#{loginManager.isUserInRole('admin')}" value="I see you have administrator powers." />
+                #{text['welcome.hello']} <strong>#{loginManager.user}</strong>.
+                <h:outputText rendered="#{loginManager.isUserInRole('admin')}" value="#{text['privileged.powers']}" />
             </p:panel>
         </h:form>
     </ui:define>

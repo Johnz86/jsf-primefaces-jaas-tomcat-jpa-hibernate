@@ -26,7 +26,8 @@
 
     <role rolename="admin"/>
     <role rolename="user"/>
-    <user username="root" password="123" roles="admin, user"/>
     <user username="john" password="123" roles="user"/>
+    <user username="root" password="123" roles="admin"/>
+    <user username="fero" password="123" roles="admin,user"/>
 
 </tomcat-users>

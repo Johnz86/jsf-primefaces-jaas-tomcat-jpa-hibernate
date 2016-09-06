@@ -9,24 +9,24 @@
 
         <div style="padding-left: 15px; padding-right: 15px">
 
-            <p>Hello, guest. The page you requested is protected. Please enter your credentials to gain access.</p>
+            <p>#{text['login.welcome']}</p>
 
             <p:panel header="Login">
                 <p:fragment autoUpdate="true">
                     <h:form>
                         <p:panelGrid styleClass="panelGridNoBorder">
                             <p:row>
-                                <p:column><p:outputLabel for="username" value="Username"/></p:column>
+                                <p:column><p:outputLabel for="username" value="#{text['login.username']}"/></p:column>
                                 <p:column><p:inputText id="username" value="#{loginManager.username}" required="true"/></p:column>
                                 <p:column><h:message for="username"/></p:column>
                             </p:row>
                             <p:row>
-                                <p:column><p:outputLabel for="password" value="Password"/></p:column>
+                                <p:column><p:outputLabel for="password" value="#{text['login.password']}"/></p:column>
                                 <p:column><p:password id="password" value="#{loginManager.password}" required="true"/></p:column>
                                 <p:column><h:message for="password"/></p:column>
                             </p:row>
                             <p:row>
-                                <p:column colspan="3"><p:commandButton value="Login" actionListener="#{loginManager.login}" /></p:column>
+                                <p:column colspan="3"><p:commandButton value="#{text['login.button']}" actionListener="#{loginManager.login}" /></p:column>
                             </p:row>
                             <p:row>
                                 <p:column colspan="3"><h:messages globalOnly="true"/></p:column>
@@ -35,9 +35,10 @@
                     </h:form>
                 </p:fragment>
                 <div style="color: blue; margin-top: 30px">
-                    The default users are in <code>src/test/resources/tomcat-users.xml</code>. You can try:<br/>
-                    Username: <code>john</code> Password: <code>123</code> Role: <code>user</code><br />
-                    Username: <code>root</code> Password: <code>123</code> Roles: <code>admin, user</code><br />
+                    #{text['login.recommend']}<br/>
+                    #{text['login.username']}: <code>john</code> #{text['login.password']}: <code>123</code> #{text['login.roles']}: <code>user</code><br />
+                    #{text['login.username']}: <code>root</code> #{text['login.password']}: <code>123</code> #{text['login.roles']}: <code>admin</code><br />
+                    #{text['login.username']}: <code>fero</code> #{text['login.password']}: <code>123</code> #{text['login.roles']}: <code>admin, user</code><br />
                 </div>
             </p:panel>
 

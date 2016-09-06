@@ -9,14 +9,14 @@
 
         <p:panel header="JSF Example">
 
-            <h3>This is the USER page.</h3>
+            <h3>#{text['page.user.header']}</h3>
 
             <p:fragment autoUpdate="true">
-                <p>Below you'll find a property and a (Ajax) button example.</p>
+                <p>#{text['ajax.example']}</p>
 
                 <p style="color: green">exampleManagedBean.exampleProperty: #{exampleManagedBean.exampleProperty}</p>
                 <h:form>
-                    <p:commandButton value="Example Ajax Action!" actionListener="#{exampleManagedBean.exampleAction}" />
+                    <p:commandButton value="#{text['ajax.action']}" actionListener="#{exampleManagedBean.exampleAction}" />
                 </h:form>
             </p:fragment>
         </p:panel>

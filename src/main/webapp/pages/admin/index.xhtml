@@ -6,18 +6,18 @@
                 xmlns:p="http://primefaces.org/ui">
 
     <ui:define name="content">
-
-        <p>Hello, <strong><h:outputText value="#{user}" /></strong>.</p>
-        <p>This is the ADMIN page. You can only view this if you have logged in with a user having the <code>admin</code> role.</p>
+        <h3>#{text['page.admin.header']}</h3>
+        <p>#{text['welcome.hello']} <strong><h:outputText value="#{user}" /></strong>.</p>
+        <p>#{text['page.admin.body']}</p>
 
         <p:dataTable var="company"
                 value="#{persistenceAwareManagedBean.allCompanies}"
                 rows="5" lazy="true"
-                emptyMessage="Table with companies is empty.">
-            <p:column headerText="ID">
+                emptyMessage="#{text['table.data.empty']}">
+            <p:column headerText="#{text['table.column.id']}">
                 <h:outputText value="#{company.id}"/>
             </p:column>
-            <p:column headerText="Company name">
+            <p:column headerText="#{text['table.column.name']}">
                 <h:outputText value="#{company.name}"/>
             </p:column>
 
